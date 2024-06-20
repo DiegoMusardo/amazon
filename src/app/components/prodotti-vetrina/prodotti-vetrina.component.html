@@ -1,3 +1,8 @@
-<pre>
+<h3>Prodotti in vetrina</h3>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <app-prodotto-preview *ngFor="let p of prodotti" [prodotto]="p"></app-prodotto-preview>
+</div>
+
+<!-- <pre>
     {{ prodotti | json }}
-</pre>
+</pre> -->
