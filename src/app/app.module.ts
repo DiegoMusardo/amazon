@@ -18,7 +18,7 @@ import { CarrelloMiniComponent } from './components/carrello-mini/carrello-mini.
     HeaderComponent,
     RatingComponent,
     CarrelloComponent,
-    CarrelloMiniComponent
+    CarrelloMiniComponent,
   ],
   imports: [
     BrowserModule,
