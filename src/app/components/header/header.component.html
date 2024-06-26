@@ -15,6 +15,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="/">Vetrina</a>
+          <a class="nav-link" href="/" *ngFor="let c of categorie">{{ c }}</a>
         </div>
         <app-carrello-mini></app-carrello-mini>
       </div>

@@ -1,4 +1,4 @@
-export const PRODOTTI = [
+/* export const PRODOTTI = [
   {
     "id": 1,
     "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -280,3 +280,4 @@ export const PRODOTTI_IN_OFFERTA = [
   }
 ];
 
+ */
