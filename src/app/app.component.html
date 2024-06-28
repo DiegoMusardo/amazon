@@ -2,8 +2,14 @@
 <div class="container py-4">
   <app-carrello></app-carrello>
   <hr>
-  <app-prodotti-vetrina></app-prodotti-vetrina>
+
+  <router-outlet></router-outlet>
+  
   <hr>
-  <footer>Cosa pensano di noi</footer>
-  <app-rating [rating]="ratingMioSito"></app-rating>
 </div>
+<footer class="bg-secondary">
+  <div class="container p-4">
+    <h3>Cosa pensano di noi</h3>
+    <app-rating [rating]="ratingMioSito"></app-rating>
+  </div>
+</footer>

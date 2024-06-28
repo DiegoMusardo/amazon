@@ -1,0 +1,8 @@
+<div *ngIf="prodotto">
+    <h1>{{ prodotto.title }}</h1>
+    <button class="btn btn-primary mt-2" (click)="addToCart()">
+        <i class="bi bi-cart-plus"></i>
+    </button>
+    <img class="img-fluid" [src]="prodotto.image">
+    <app-rating [rating]="prodotto.rating"></app-rating>
+</div>

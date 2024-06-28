@@ -1,0 +1,3 @@
+<div class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let p of posts" [routerLink]="['/articoli', p.id]">{{ p.title }}</a>
+</div>
