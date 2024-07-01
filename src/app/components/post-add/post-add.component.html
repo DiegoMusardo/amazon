@@ -1,0 +1,15 @@
+<h1>Nuovo articolo</h1>
+<form (ngSubmit)="aggiungiPost()">
+    <div class="mb-3">
+        <label for="title" class="form-label">Titolo</label>
+        <input type="text" name="title" id="title" class="form-control" placeholder="Titolo..." [(ngModel)]="model.title">
+    </div>
+    <div class="mb-3">
+        <label for="body" class="form-label">Testo</label>
+        <textarea type="text" name="body" id="body" class="form-control" placeholder="Titolo..." rows="5" [(ngModel)]="model.body"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Salva</button>
+</form>
+<pre>
+    {{ model | json}}
+</pre>
