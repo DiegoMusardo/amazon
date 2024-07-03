@@ -1,15 +1,20 @@
-<h1>Nuovo articolo</h1>
-<form (ngSubmit)="aggiungiPost()">
+<h1 #titolo class="pippo">Nuovo articolo</h1>
+<!-- template reference variable -->
+<form (ngSubmit)="aggiungiPost()" #laForm="ngForm">
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
-        <input type="text" name="title" id="title" class="form-control" placeholder="Titolo..." [(ngModel)]="model.title">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Titolo..." [(ngModel)]="model.title" required #inputTitle="ngModel" [ngClass]="{ 'is-invalid': inputTitle.invalid && inputTitle.dirty, 'is-valid': inputTitle.valid && inputTitle.dirty }" pattern="T.+">
+        <div class="invalid-feedback" *ngIf="inputTitle.invalid && inputTitle.dirty">Titolo non valido (obbligatorio e deve cominciare con T)</div>
     </div>
     <div class="mb-3">
         <label for="body" class="form-label">Testo</label>
-        <textarea type="text" name="body" id="body" class="form-control" placeholder="Titolo..." rows="5" [(ngModel)]="model.body"></textarea>
+        <textarea type="text" name="body" id="body" class="form-control" placeholder="Titolo..." rows="5" [(ngModel)]="model.body" required #textBody="ngModel" [ngClass]="{ 'is-invalid' : textBody.invalid && textBody.dirty, 'is-valid': textBody.valid && textBody.dirty }"></textarea>
+        <div class="invalid-feedback" *ngIf="textBody.invalid && textBody.dirty">Titolo non valido</div>
     </div>
-    <button type="submit" class="btn btn-primary">Salva</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!laForm.valid">Salva</button>
+    <!-- <div *ngIf="!laForm.valid">FORM NON VALIDA</div> -->
 </form>
 <pre>
     {{ model | json}}
+    {{ laForm.valid }}
 </pre>
